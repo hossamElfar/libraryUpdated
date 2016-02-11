@@ -35,6 +35,9 @@ Route::group(['middleware' => 'web'], function () {
     Route::auth();
     Route::resource('Books','BooksController');
     Route::get('Books/rent/{id}','BooksController@rent');
-    Route::get('/home', 'BooksController@index');
+    Route::get('/home', 'userController@profile');
+    Route::get('/user/update','userController@edit');
+    Route::post('/user/store','userController@store');
+    Route::post('/user/status','userController@postStatus');
     Route::get('/', 'BooksController@index');
 });

@@ -49,6 +49,7 @@ class BooksController extends Controller
     {
         $book = $r->all();
         $book['addedDate']=Carbon::now();
+        $book['userAdd']=Auth::user()->id;
         Book::create($book);
         return redirect('/home');
     }

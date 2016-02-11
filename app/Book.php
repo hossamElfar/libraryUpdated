@@ -10,9 +10,10 @@ class Book extends Model
     protected $dates=['addedDate'];
 
     public function rented(){
-        $this->belongsTo('App\User');
+        return $this->belongsTo('App\User');
     }
     public function scopeNotRented($query){
         $query->where('rented','!=','1');
     }
+
 }

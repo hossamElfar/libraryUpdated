@@ -47,8 +47,9 @@
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li><a href="{{ url('/home') }}">Your profile</a></li>
                     <li><a href={{url('Books/create')}}>Add Book</a></li>
+                    <li><a href={{url('/')}}>All Books</a></li>
                     <li><a href={{url('Books/rentedBooks')}}>Your Rented Books</a></li>
                 </ul>
 
@@ -67,7 +68,10 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                <li><a href="{{ url('/user/update') }}"><i class="fa fa-btn"></i>Edit Your profile</a></li>
+
                             </ul>
+
                         </li>
                     @endif
                 </ul>

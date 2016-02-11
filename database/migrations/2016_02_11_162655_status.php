@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Books extends Migration
+class Status extends Migration
 {
     /**
      * Run the migrations.
@@ -12,17 +12,12 @@ class Books extends Migration
      */
     public function up()
     {
-        Schema::create('books', function (Blueprint $table) {
+        Schema::table('status', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->timestamp('addedDate');
-            $table->string('author');
-            $table->integer('rented')->default('0');
+            $table->string('status');
             $table->integer('user_id');
-            $table->integer('userAdd');
-            $table->integer('ISBN');
+            $table->timestamp('typedOn');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->timestamps();
         });
     }
 
@@ -33,6 +28,8 @@ class Books extends Migration
      */
     public function down()
     {
-        Schema::drop('books');
+        Schema::table('status', function (Blueprint $table) {
+            //
+        });
     }
 }
