@@ -13,7 +13,7 @@
             @endforeach
         @else
             <div class="alert alert-warning">
-                <h3>There is no any books That you have rented yet</h3>
+                <h3>There is no any books That you have rented yet To rent Books Go to <a href={{url('/')}}>home page </a>and start renting !!!</h3>
             </div>
         @endif
     </div>

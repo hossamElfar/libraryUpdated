@@ -18,7 +18,7 @@
                         @endforeach
                         @else
                            <div class="alert alert-warning">
-                               <h3>There is no any books in the library yet</h3>
+                               <h3>There is no any books in the library . Want to <a href={{url('Books/create')}}>add one ?? </a></h3>
                            </div>
                     @endif
                 </div>
