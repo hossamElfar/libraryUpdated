@@ -18,7 +18,6 @@ class Books extends Migration
             $table->timestamp('addedDate');
             $table->string('author');
             $table->integer('rented')->default('0');
-            
             $table->integer('user_id');
             $table->integer('ISBN');
             $table->foreign('user_id')->references('id')->on('users');
